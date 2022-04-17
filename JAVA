@@ -9,7 +9,6 @@ function corrigir(){
     let nome = document.querySelector("#noome").value;
     document.querySelector("#nome").innerHTML = "Nome: "+nome;
 
-    Questão 1
     let opcao = document.querySelector("#Q01").value;
     if(opcao == "informatica"){
         acertos++
@@ -21,7 +20,6 @@ function corrigir(){
         acertos++
     }
 
-    //Qustão 3
     let checkbox_octal = document.querySelector("#check1");
     let checkbox_bi = document.querySelector("#check2");
     let checkbox_deci = document.querySelector("#check3");
@@ -51,11 +49,6 @@ function corrigir(){
     if(certa.checked){
         acertos++;
     }
-
-
-
-
-
 
     document.querySelector("#corretas").innerHTML = acertos+" de 5";
 
