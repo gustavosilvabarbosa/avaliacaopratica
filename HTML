@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> 
+<meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Sistema de Avaliação</title> 
+<style type="text/css"> 
+.button {
+background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;
+ margin: 4px 2px;
+ cursor: pointer; 
+transition:.2s; 
+} 
+.button:active{
+ background-color: #503230; 
+transition:.2s; 
+} 
+#texto{ 
+width: 300px;
+ }
+ .hide{
+ display: none; 
+} 
+textarea{ 
+resize: none; 
+} fieldset{ 
+width: max-content;
+border: 2px dotted blueviolet; 
+}
+ legend{
+ font-weight: bolder; font-size: 18px; 
+} 
+</style>
+</head>
+<body> 
+<h2> Sistema de Avaliação Online </h2>
+ <form>
+<b>Seu Nome</b>
+ <input type="text" id="texto"/><br>
+ <fieldset> 
+<legend> 1. Qual curso Técnico do Amélia é da área de Tecnologia? </legend> <select name="sel" id="Q01"> <option value="administracao">Administração</option> <option value="informatica">Informática</option>
+<option value="enfermagem">Enfermagem</option> </select> </fieldset>
+<fieldset> <legend>2. Quais cursos são ofertados na EEEP Amélia Figueiredo de Lavor?</legend> <textarea name="tex1" id="Q02" cols="56" rows="5"></textarea> <br> </fieldset> <fieldset> <legend>3. Marque as opções que possui os sistemas de numerações novos que aprendemos no 1º de Informática</legend> Sistema Octal <input type="checkbox" id="check1"> <br> Sistema Binário <input type="checkbox" id="check2"> <br> Sistema Decimal <input type="checkbox" id="check3"> <br> Algarismos Hexadecimal <input type="checkbox" id="check4"> <br> </fieldset> <fieldset> <legend>4. Qual o produto abaixo é mais adequado para limpar uma memória RAM?</legend> <label for="iso">Álcool Isopropílico</label> <input type="radio" name="limpeza" id="iso"> <br> <label for="con">Limpa Contato</label> <input type="radio" name="limpeza" id="con"> <br> <label for="alc">Álcool 70%</label> <input type="radio" name="limpeza" id="alc"> <br> <label for="agu">Água</label> <input type="radio" name="limpeza" id="agu"> <br> </fieldset> 
+<fieldset> <legend>5. Podemos afirmar que o modo de funcionamento de memória RAM em<br> DUAL CHANNEL só pode ser feito com pares de módulos de memória. Marque se a afirmação é verdadeira ou falsa. </legend> <label for="ver">Verdadeira</label> <input type="radio" name="VF" id="ver"> <br> <label for="fal">Falsa</label> <input type="radio" name="VF" id="fal"> <br> </fieldset>
+
+<button type="button" class="button" onclick="corrigir()"><b>Corrigir</b></button>
+ <br>
+ <br>
+ <fieldset class="hide"> <legend><b>Resumo</b></legend> 
+<div id="nome"></div>
+ <div id="corretas"></div> <div id="percentual"></div>
+ </fieldset>
+</form> 
+<script src="script.js"></script>
+</body>
+</html>
